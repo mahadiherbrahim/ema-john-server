@@ -30,7 +30,7 @@ client.connect(err => {
     })
 
     app.get('/products',(req,res) => {
-            products.find({}).limit(25)
+            products.find({})
             .toArray((err,documents)=> {
                 res.send(documents)
             })
